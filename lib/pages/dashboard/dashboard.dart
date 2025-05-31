@@ -55,10 +55,16 @@ class Dashboard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const CircleAvatar(
-                          radius: 25,
-                          backgroundImage: NetworkImage('/placeholder.svg?height=50&width=50'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/profile');
+                          },
+                          child: const CircleAvatar(
+                            radius: 25,
+                            backgroundImage: NetworkImage('/placeholder.svg?height=50&width=50'),
+                          ),
                         ),
+
                       ],
                     ),
                   ],
